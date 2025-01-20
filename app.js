@@ -1,7 +1,7 @@
        const questions = [
-    { question: "僕はSausydogがすきか", answer: true },
-    { question: "僕はクリープハイプが嫌いか", answer: true },
-    { question: "僕はmoondoropが好きか", answer: true }
+    { question: "僕はSausydogがすきか" , answer: true },
+    { question: "僕はクリープハイプが嫌いか" , answer: true },
+    { question: "僕はmoondoropが好きか" , answer: true }
 ];
  
 let currentQuestionIndex = 0;
