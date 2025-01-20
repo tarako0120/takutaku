@@ -1,7 +1,7 @@
        const questions = [
-    { question: "僕はSausydogがすきか", answer: true },
-    { question: "僕はクリープハイプが嫌いか", answer: true },
-    { question: "僕はmoondoropが好きか", answer: true }
+    { question: "Sausydogの名前はスヌーピーが由来になっている", answer: true },
+    { question: "石原慎也は25歳である", answer: true },
+    { question: "結成して12年か", answer: true }
 ];
  
 let currentQuestionIndex = 0;
