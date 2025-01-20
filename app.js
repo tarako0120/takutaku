@@ -1,5 +1,5 @@
        const questions = [
-    { question: "Sausydogの名前はスヌーピーが由来になっている", answer: true },
+    { question: "Saucydogの名前はスヌーピーが由来になっている", answer: true },
     { question: "石原慎也は25歳である", answer: true },
     { question: "結成して12年か", answer: true }
 ];
