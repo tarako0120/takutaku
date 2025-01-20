@@ -1,27 +1,29 @@
-        function checkFortune() {
-            var colour = document.getElementById('colour-select').value;
-            var number = parseInt(document.getElementById('number-input').value, 10);
-            var result = "凶"; // デフォルトの値
-
-            if (colour === "黒" && number === 0) {
-                result = "小吉";
-            } else if (colour === "黒" && number === 1) {
-                result = "中吉";
-            } else if (colour === "黒" && number === 2) {
-                result = "凶";
-            } else if (colour === "白" && number === 0) {
-                result = "中吉";
-            } else if (colour === "白" && number === 1) {
-                result = "中吉";
-            } else if (colour === "白" && number === 2) {
-                result = "大凶";
-            } else if (colour === "オレンジ" && number === 0) {
-                result = "凶";
-            } else if (colour === "オレンジ" && number === 1) {
-                result = "大吉";
-            } else if (colour === "オレンジ" && number === 2) {
-                result = "中吉";
-            }
-
-            document.getElementById('result-output').innerText = "あなたの今週の運勢は【" + result + "】です";
-        }
+       const questions = [
+    { question: "僕はSausydogがすきか", answer: true },
+    { question: "僕はクリープハイプが嫌いか", answer: true },
+    { question: "僕はmoondoropが好きか", answer: true }
+];
+ 
+let currentQuestionIndex = 0;
+ 
+function showQuestion() {
+    const questionElement = document.getElementById('question');
+    questionElement.textContent = questions[currentQuestionIndex].question;
+}
+ 
+function checkAnswer(userAnswer) {
+    const resultElement = document.getElementById('result');
+    if (userAnswer === questions[currentQuestionIndex].answer) {
+        resultElement.textContent = "○";
+    } else {
+        resultElement.textContent = "×...";
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        resultElement.textContent += " お疲れ様でした。！";
+    }
+}
+ 
+showQuestion();
